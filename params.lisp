@@ -1,9 +1,13 @@
 (in-package #:cl-textteaser)
 
-(defparameter *sentence-ideal-words* 20)
+(defparameter *sentence-ideal-words* 20
+  "The ideal length, in words, of a sentence.")
 
-(defparameter *min-word-length* 3)
+(defparameter *min-word-length* 3
+  "The minimum length of a keyword.")
 
-(defparameter *default-summary-size* 5)
+(defparameter *summary-size* 5
+  "The number of sentences to return in the summary.")
 
-(defparameter *default-keywords-size* 10)
+(defparameter *keywords-size* 10
+  "The minimum number of keywords.")

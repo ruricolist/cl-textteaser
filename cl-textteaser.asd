@@ -8,7 +8,8 @@
   :depends-on (#:alexandria
                #:serapeum
                #:cl-libstemmer
-               #:cl-ppcre)
+               #:cl-ppcre
+               #:fiveam)
   :components ((:file "package")
                (:file "params")
                (:file "stop-words")
