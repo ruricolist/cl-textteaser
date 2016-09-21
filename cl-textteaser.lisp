@@ -116,8 +116,11 @@
   (/ (- ideal (abs (- ideal (length words)))) ideal))
 
 (defun title-score (title-words words)
-  (/ (intersection-size (sans-stop-words words) title-words)
-     (length title-words)))
+  (let ((title-len (length title-words)))
+    (if (zerop title-len)
+        0
+        (/ (intersection-size (sans-stop-words words) title-words)
+           title-len))))
 
 (defun intersection-size (list1 list2 &rest args)
   (length (apply #'intersection list1 list2 :test #'equal args)))
